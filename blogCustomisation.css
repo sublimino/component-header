@@ -1,6 +1,7 @@
 .header {
   border-bottom: solid 10px;
   background-position: center -60px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header--blog21003976{
@@ -32,6 +33,10 @@
   -2px 2px var(--header__title-text-shadow, var(--color-chicago)),
   -2px -2px var(--header__title-text-shadow, var(--color-chicago)),
   2px 2px var(--header__title-text-shadow, var(--color-chicago));
+}
+
+.header__text {
+  background: var(--color-chicago);
 }
 
 @media (--viewport-big) {

@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-header",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Reusable header for collections pages or detail pages",
   "author": "The Economist (http://economist.com)",
   "license": "MIT",
@@ -140,6 +140,7 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.4.2",
+    "@economist/component-icon": "^3.6.6",
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",
