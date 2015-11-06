@@ -8,7 +8,7 @@ describe(`A header`, () => {
     it('is compatible with React.Component', () => {
       Header.should.be.a('function').and.respondTo('render');
     });
-    it(`it's renders a React element`, () => {
+    it(`renders a React element`, () => {
       React.isValidElement(
         <Header
           title="Required"
@@ -20,11 +20,11 @@ describe(`A header`, () => {
       title: 'Required',
     }));
     const header = shallowRenderer.getRenderOutput();
-    it(`it always render an Header tag as main wrapper with a header className`, () => {
+    it(`always renders a Header tag as main wrapper with a header className`, () => {
       header.type.should.equal('header');
       header.props.className.should.equal('header');
     });
-    it(`its Header tag has specific attributes`, () => {
+    it(`has specific attributes on Header tag`, () => {
       header.props.itemScope.should.equal(true);
       header.props.itemProp.should.equal('article');
       header.props.role.should.equal('header');
@@ -35,8 +35,8 @@ describe(`A header`, () => {
       const groupText = header.props.children[1];
       describe(`it has a text group`, () => {
         it(`the text group always renders a title that is mandatory and wrapped on an H1 tag`, () => {
-          groupText.props.className.should.equal('header__group-text');
           const title = groupText.props.children[0];
+          groupText.props.className.should.equal('header__group-text');
           title.type.should.equal('h1');
           title.props.className.should.equal('header__title');
         });
@@ -45,7 +45,7 @@ describe(`A header`, () => {
         it('the image group is always present to keep layout consistent also if image is not present', () => {
           groupImage.props.className.should.equal('header__group-image');
         });
-        it('the image can optionaly be provided an rendered with a className header__img', () => {
+        it('the image can optionaly be provided and rendered with a className header__img', () => {
           shallowRenderer.render(React.createElement(Header, {
             title: 'Required',
             image: {
