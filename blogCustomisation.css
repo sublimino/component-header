@@ -1,3 +1,5 @@
+@import "@economist/component-palette";
+
 .header {
   border-bottom: solid 10px;
   background-position: center -60px;
