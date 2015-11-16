@@ -100,7 +100,11 @@ export default class Header extends React.Component {
         itemScope itemType={this.props.itemType} itemProp={this.props.itemProp}
         role="header"
         style={inlineStyle}
-      >{groups}</header>
+      >
+        <div className="header__wrapper">
+          {groups}
+        </div>
+      </header>
     );
   }
 }
