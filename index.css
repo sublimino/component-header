@@ -12,7 +12,7 @@
 }
 
 .header__wrapper {
-  max-width: var(--site-max-width, 1000px);
+  max-width: var(--site-max-width, 1190px);
   margin: 0 auto;
 }
 
