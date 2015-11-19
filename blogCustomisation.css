@@ -30,7 +30,7 @@
   margin: 0;
 }
 /* This part is temporary, should be removed when right background illustation will be provided. */
-.header__title {
+.header--large-mode .header__title {
   text-shadow: 2px -2px var(--header__title-text-shadow, var(--color-chicago)),
   -2px 2px var(--header__title-text-shadow, var(--color-chicago)),
   -2px -2px var(--header__title-text-shadow, var(--color-chicago)),

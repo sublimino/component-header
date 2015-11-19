@@ -7,6 +7,7 @@ export default class Header extends React.Component {
         src: React.PropTypes.string,
       }),
       flyTitle: React.PropTypes.string,
+      smallMode: React.PropTypes.bool,
       title: React.PropTypes.string.isRequired,
       text: React.PropTypes.string,
       itemType: React.PropTypes.string,
@@ -41,7 +42,7 @@ export default class Header extends React.Component {
       >
         {image}
       </div>));
-    if (this.props.flyTitle) {
+    if (this.props.flyTitle && !this.props.smallMode) {
       headerContent.push((
         <h2
           className="header__flytitle"
@@ -60,7 +61,7 @@ export default class Header extends React.Component {
       itemProp="headline"
       key={`header__title`}
     >{title}</h1>));
-    if (this.props.text) {
+    if (this.props.text && !this.props.smallMode) {
       headerContent.push((
         <div
           className="header__text"
@@ -92,6 +93,11 @@ export default class Header extends React.Component {
     let className = 'header';
     if (this.props.className) {
       className += ` ${this.props.className}`;
+    }
+    if (this.props.smallMode) {
+      className += ' header--small-mode';
+    } else {
+      className += ' header--large-mode';
     }
 
     return (

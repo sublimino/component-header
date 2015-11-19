@@ -6,6 +6,7 @@ export default (
   <div>
     <Header
       className="header--blog21003976"
+      smallMode
       image={{
         src: `http://cdn.static-economist.com/sites/default/files/external/test-assets/democracy-in-america.svg`,
       }}
@@ -19,12 +20,6 @@ export default (
         href: 'http://www.google.com',
         title: 'Clicke here and go somewhere',
       }}
-    ><div className="header__follow-us-title">Follow on</div>
-      <div className="header__follow-us-icons">
-        <a href="https://twitter.com/TheEconomist">
-          <Icon icon="twitter" size="40px" />
-        </a>
-      </div>
-    </Header>
+    ></Header>
   </div>
 );
